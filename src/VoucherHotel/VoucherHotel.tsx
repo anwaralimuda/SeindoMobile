@@ -9,28 +9,13 @@ import {
   Linking,
 } from "react-native";
 import TabNavigator from "../components/TabNavigator";
-import RNFetchBlob from 'rn-fetch-blob';
 
 const VoucherHotel = (props: any) => {
-    const handleDownloadPDF = async () => {
-        const pdfUrl = 'https://example.com/path-to-your-pdf.pdf';
-        
-        try {
-          const response = await RNFetchBlob.config({
-            fileCache: true,
-            addAndroidDownloads: {
-              useDownloadManager: true,
-              notification: true,
-              path: RNFetchBlob.fs.dirs.DownloadDir + '/your-pdf-file.pdf', // Gantilah dengan nama yang sesuai
-            },
-          }).fetch('GET', pdfUrl);
-    
-          // Pemberitahuan bahwa unduhan berhasil
-          console.log('Unduhan berhasil:', response.path());
-        } catch (error) {
-          console.error('Terjadi kesalahan saat mengunduh:', error);
-        }
-      };
+  const handleDownloadPDF = () => {
+    const pdfUrl = "https://www.template.net/editable/vouchers/hotel-pdf";
+    Linking.openURL(pdfUrl);
+  };
+
   console.log(props.navigation);
   return (
     <View style={{ flex: 1 }}>
@@ -126,19 +111,26 @@ const VoucherHotel = (props: any) => {
           >
             CONFIRMED
           </Text>
-          <View style={{ flexDirection: "row" }}>
-            <Text
-              style={{
-                fontSize: 16,
-                marginTop: 30,
-                textDecorationLine: "underline",
-                color: "#5D77FE",
-              }}
-            >
-              Download PDF
-            </Text>
-            <Icon name="download" type="antdesign" size={20} style={{ marginTop: 29, marginLeft: 10 }}/>
-          </View>
+          <TouchableOpacity onPress={handleDownloadPDF}>
+            <View style={{ flexDirection: "row" }}>
+              <Text
+                style={{
+                  fontSize: 16,
+                  marginTop: 30,
+                  textDecorationLine: "underline",
+                  color: "#5D77FE",
+                }}
+              >
+                Download PDF
+              </Text>
+              <Icon
+                name="download"
+                type="antdesign"
+                size={20}
+                style={{ marginTop: 29, marginLeft: 10 }}
+              />
+            </View>
+          </TouchableOpacity>
         </View>
       </ScrollView>
       <TabNavigator />
