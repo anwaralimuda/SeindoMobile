@@ -13,7 +13,31 @@ import { Image } from "react-native";
 import Recommended from "../components/Recommended";
 import TabNavigator from "../components/TabNavigator";
 
+
 const Hotel = (props: any) => {
+  const [roomCount, setRoomCount] = useState(1);
+
+  const incrementRoomCount = () => {
+    setRoomCount(roomCount + 1);
+  };
+
+  const decrementRoomCount = () => {
+    if (roomCount > 1) {
+      setRoomCount(roomCount - 1);
+    }
+  };
+  const [adultCount, setAdultCount] = useState(2); 
+
+  const incrementAdultCount = () => {
+    setAdultCount(adultCount + 1);
+  };
+
+  const decrementAdultCount = () => {
+    if (adultCount > 1) {
+      setAdultCount(adultCount - 1);
+    }
+  };
+
   console.log(props.navigation);
 
   return (
@@ -118,14 +142,18 @@ const Hotel = (props: any) => {
                   borderColor: "#000",
                 }}
               >
-                <Icon name="minus" type="antdesign" size={30} color="#000" />
-                <Text style={{ marginTop: 5 }}>1 Room</Text>
-                <Icon
-                  name="plussquareo"
-                  type="antdesign"
-                  size={30}
-                  color="#000"
-                />
+                <TouchableOpacity onPress={decrementRoomCount}>
+                  <Icon name="minus" type="antdesign" size={30} color="#000" />
+                </TouchableOpacity>
+                <Text style={{ marginTop: 5 }}>{roomCount} Room</Text>
+                <TouchableOpacity onPress={incrementRoomCount}>
+                  <Icon
+                    name="plussquareo"
+                    type="antdesign"
+                    size={30}
+                    color="#000"
+                  />
+                </TouchableOpacity>
               </View>
               <View
                 style={{
@@ -139,14 +167,18 @@ const Hotel = (props: any) => {
                   borderColor: "#000",
                 }}
               >
-                <Icon name="minus" type="antdesign" size={30} color="#000" />
-                <Text style={{ marginTop: 5 }}>2 Adult</Text>
-                <Icon
-                  name="plussquareo"
-                  type="antdesign"
-                  size={30}
-                  color="#000"
-                />
+                <TouchableOpacity onPress={decrementAdultCount}>
+                  <Icon name="minus" type="antdesign" size={30} color="#000" />
+                </TouchableOpacity>
+                <Text style={{ marginTop: 5 }}>{adultCount} Adult</Text>
+                <TouchableOpacity onPress={incrementAdultCount}>
+                  <Icon
+                    name="plussquareo"
+                    type="antdesign"
+                    size={30}
+                    color="#000"
+                  />
+                </TouchableOpacity>
               </View>
             </View>
             <View>
