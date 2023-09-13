@@ -16,6 +16,7 @@ import AddCreditCard from "./src/AddCreditCard/AddCreditCard";
 import ConfirmPayment from "./src/components/ConfirmPayment";
 import PaymentCompleted from "./src/PaymentCompleted/PaymentCompleted";
 import VoucherHotel from "./src/VoucherHotel/VoucherHotel";
+import Profile from "./src/Profile/Profile";
 
 const Stack = createNativeStackNavigator();
 
@@ -40,6 +41,7 @@ const App = () => {
         <Stack.Screen name="ConfirmPayment" component={ConfirmPayment} />
         <Stack.Screen name="PaymentCompleted" component={PaymentCompleted} />
         <Stack.Screen name="VoucherHotel" component={VoucherHotel} />
+        <Stack.Screen name="Profile" component={Profile} />
       </Stack.Navigator>
     </NavigationContainer>
   );

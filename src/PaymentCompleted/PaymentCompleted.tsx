@@ -12,6 +12,7 @@ import { Image } from "react-native";
 import TabNavigator from "../components/TabNavigator";
 
 const PaymentCompleted = (props: any) => {
+  console.log(props.navigation);
 
   return (
     <View style={{ flex: 1 }}>
@@ -41,12 +42,14 @@ const PaymentCompleted = (props: any) => {
               }}
             >
               <View style={{ flexDirection: "row", marginTop: 15 }}>
+                <TouchableOpacity onPress={() =>props.navigation.navigate("Profile")}>
                 <Icon
                   name="menu"
                   type="ionicon"
                   size={55}
                   style={{ borderColor: "#fff" }}
                 />
+                </TouchableOpacity>
                 <Text
                   style={{
                     fontSize: 30,
