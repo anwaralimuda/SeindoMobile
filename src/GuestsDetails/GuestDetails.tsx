@@ -311,7 +311,7 @@ const GuestDetails = (props: any) => {
               flexDirection: "row",
               alignItems: "center",
               marginTop: 30,
-              marginLeft: 130,
+              marginLeft: 25,
             }}
             >
             <View

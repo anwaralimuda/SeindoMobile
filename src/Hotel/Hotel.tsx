@@ -129,14 +129,14 @@ const Hotel = (props: any) => {
               <Icon name="calendar" type="feather" size={30} color="#000" />
               <TextInput style={styles.textInput} placeholder="Check Out" />
             </View>
-            <View style={{ flexDirection: "row", gap: 22 }}>
+            <View style={{ flexDirection: "row", gap: 7 }}>
               <View
                 style={{
                   flexDirection: "row",
-                  gap: 5,
-                  paddingHorizontal: 20,
+                  gap: 4,
+                  paddingHorizontal: 7,
                   marginTop: 15,
-                  paddingVertical: 13,
+                  paddingVertical: 10,
                   borderRadius: 10,
                   borderWidth: 1,
                   borderColor: "#000",
@@ -158,10 +158,10 @@ const Hotel = (props: any) => {
               <View
                 style={{
                   flexDirection: "row",
-                  gap: 5,
-                  paddingHorizontal: 20,
+                  gap: 4,
+                  paddingHorizontal: 7,
                   marginTop: 15,
-                  paddingVertical: 13,
+                  paddingVertical: 10,
                   borderRadius: 10,
                   borderWidth: 1,
                   borderColor: "#000",

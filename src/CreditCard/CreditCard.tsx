@@ -16,7 +16,7 @@ const CreditCard = (props: any) => {
   console.log(props.navigation);
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <View style={styles.container}>
         <LinearGradient
           colors={["#ED4C4C", "#FFFFFF"]}

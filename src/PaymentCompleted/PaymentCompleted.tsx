@@ -42,19 +42,24 @@ const PaymentCompleted = (props: any) => {
               }}
             >
               <View style={{ flexDirection: "row", marginTop: 15 }}>
-                <TouchableOpacity onPress={() =>props.navigation.navigate("Profile")}>
-                <Icon
-                  name="menu"
-                  type="ionicon"
-                  size={55}
-                  style={{ borderColor: "#fff" }}
-                />
+                <TouchableOpacity
+                  onPress={() => props.navigation.navigate("Profile")}
+                >
+                  <Image
+                    source={require("../../assets/icon_menu.png")}
+                    style={{
+                      height: 40,
+                      width: 40,
+                      alignSelf: "flex-start",
+                      marginTop: 15,
+                    }}
+                  />
                 </TouchableOpacity>
                 <Text
                   style={{
-                    fontSize: 30,
+                    fontSize: 25,
                     color: "#fff",
-                    marginTop: 10,
+                    marginTop: 18,
                     marginHorizontal: 100,
                     textAlign: "center",
                   }}
@@ -181,7 +186,9 @@ const PaymentCompleted = (props: any) => {
             Anwar Alimuda Lubis
           </Text>
         </View>
-        <TouchableOpacity onPress={() => props.navigation.navigate("VoucherHotel")}>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate("VoucherHotel")}
+        >
           <Text style={styles.Button}>Done</Text>
         </TouchableOpacity>
       </ScrollView>

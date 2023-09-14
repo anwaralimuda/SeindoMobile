@@ -17,6 +17,8 @@ import ConfirmPayment from "./src/components/ConfirmPayment";
 import PaymentCompleted from "./src/PaymentCompleted/PaymentCompleted";
 import VoucherHotel from "./src/VoucherHotel/VoucherHotel";
 import Profile from "./src/Profile/Profile";
+import TabNavigator from "./src/components/TabNavigator";
+
 
 const Stack = createNativeStackNavigator();
 
@@ -43,6 +45,7 @@ const App = () => {
         <Stack.Screen name="VoucherHotel" component={VoucherHotel} />
         <Stack.Screen name="Profile" component={Profile} />
       </Stack.Navigator>
+      <TabNavigator/>
     </NavigationContainer>
   );
 };

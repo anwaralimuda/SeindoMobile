@@ -99,7 +99,7 @@ const Payment = (props: any) => {
             type="ionicon"
             size={35}
             color={"#C3C7C8"}
-            style={{ marginLeft: 174 }}
+            style={{ marginLeft: 130 }}
           />
         </TouchableOpacity>
       </View>
@@ -122,7 +122,7 @@ const Payment = (props: any) => {
             type="ionicon"
             size={35}
             color={"#C3C7C8"}
-            style={{ marginLeft: 160 }}
+            style={{ marginLeft: 116 }}
           />
         </TouchableOpacity>
       </View>
@@ -145,7 +145,7 @@ const Payment = (props: any) => {
           type="ionicon"
           size={35}
           color={"#C3C7C8"}
-          style={{ marginLeft: 225 }}
+          style={{ marginLeft: 180 }}
         />
         </TouchableOpacity>
       </View>
@@ -168,7 +168,7 @@ const Payment = (props: any) => {
           type="ionicon"
           size={35}
           color={"#C3C7C8"}
-          style={{ marginLeft: 200 }}
+          style={{ marginLeft: 150 }}
         />
         </TouchableOpacity>
       </View>
