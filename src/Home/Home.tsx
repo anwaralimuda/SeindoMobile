@@ -14,7 +14,7 @@ import { Image } from "react-native";
 import TabNavigator from "../components/TabNavigator";
 
 const Home = (props: any) => {
-  console.log('#########',props);
+  console.log(props.navigation);
   return (
     <View style={styles.container}>
       <LinearGradient

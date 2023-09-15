@@ -1,10 +1,10 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { Icon } from "@rneui/base";
-import { useNavigation } from '@react-navigation/native';
 
 const TabNavigator = (props: any) => {
   console.log(props.navigation);
+
   return (
     <View>
       <View
@@ -22,7 +22,7 @@ const TabNavigator = (props: any) => {
       >
         <View style={{ flexDirection: "column" }}>
           <View style={{ flexDirection: "column" }}>
-            <TouchableOpacity onPress={() =>props.navigation.navigate("Home")}>
+            <TouchableOpacity onPress={() => props.navigation.navigate("Home")}>
               <Icon name="home" type="antdesign" size={30} color={"#000"} />
               <Text>Home</Text>
             </TouchableOpacity>
